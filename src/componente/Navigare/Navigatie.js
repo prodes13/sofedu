@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../../imagini/logo.png';
 import logoName from '../../imagini/logoName.png';
 import './Navigatie.css';
+import { Link } from 'react-router-dom';
 
 const Navigatie = () => {
     return (
@@ -12,13 +13,13 @@ const Navigatie = () => {
             </a>
             <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Acasa</a>
+                <Link to="/login">Acasa</Link>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Teorie</a>
+                <Link to="/teorie">Teorie</Link>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Teste</a>
+                <Link to="/test2">Teste</Link>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Despre</a>
