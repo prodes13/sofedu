@@ -1,19 +1,25 @@
 .navigare {
     position: relative;
+    position: sticky;
+    top: 0;
     height: 120px;
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    z-index: 1000;
 }
 .logo {
-    width: 120px;
+    width: 70px;
 }
 
 .logoName {
     width: 250px;
     position: relative;
-    top: -20px;
+    top: -10px;
     left: -10px;
 }
 .brand {
+    position: relative;
+    top: 22px;
+    left: 10px;
     float: left;
 }
 .navigare ul {
@@ -23,7 +29,7 @@
     padding: 0;
     left: 300px;
     overflow: hidden;
-    top: 50px;
+    top: 40px;
     background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
