@@ -1,0 +1,50 @@
+.navigare {
+    position: relative;
+    height: 120px;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+.logo {
+    width: 120px;
+}
+
+.logoName {
+    width: 250px;
+    position: relative;
+    top: -20px;
+    left: -10px;
+}
+.brand {
+    float: left;
+}
+.navigare ul {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    left: 300px;
+    overflow: hidden;
+    top: 50px;
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.navigare li:first-child {
+    margin-left: 50px;
+}
+.navigare li {
+    float: left;
+  }
+  
+.navigare li a {
+    display: block;
+    color: rgb(85, 85, 85);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.5s all;
+  }
+
+.navigare li a:hover {
+    background-color:#8CC63F;
+    color: white;
+  }

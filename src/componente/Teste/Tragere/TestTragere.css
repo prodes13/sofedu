@@ -1,0 +1,75 @@
+.container-drag {
+    text-align: center;
+  }
+  .fundamentale {
+    position: absolute;
+    width: 350px;
+    min-height: 50vh;
+    left: 0;
+    top: 10;
+    background-color: #EEEEEE;
+  }
+  
+  .header {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background-color: #E0E0E0;
+    width:100%;
+  }
+  
+  .task-header {
+    display: inline-block;
+    background-color: skyblue;
+    width:100%;
+  }
+  
+  .droppable {
+    position: absolute;
+    width: 350px;
+    min-height: 50vh;
+    right: 0;
+    top: 10;
+    background-color: rgb(226, 226, 226);
+  }
+  
+  .draggable {
+    width: 150px;
+    min-height: 50px;
+    background-color: yellow;
+    margin: 5px auto;
+  }
+  .enumerare {
+    height: 50vh;
+  }
+  .panou-butoane {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background-color: #E0E0E0;
+    width:100%;
+    padding: 20px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+
+  }
+
+  .panou-butoane button:first-child { 
+    margin-right: 50px;
+  }
+
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all .3s;
+  }
+  .button:hover {
+    background-color: #008CBA; /* Blue */
+  }
