@@ -3,56 +3,77 @@ import './TestTragere.css';
 
 class TestTragere extends Component {
     state = {
+        mesaj: "",
         marimi: [
         {
             nume: "Lungime",
             categorie: "fundamentale",
-            bgcolor: "pink"
+            bgcolor: "pink",
+            clasa: "draggable olinie",
+            corect: "fundamental"
         }, 
         {
             nume: "Masa",
             categorie: "enumerare",
-            bgcolor: "orange"
+            bgcolor: "orange",
+            clasa: "draggable olinie",
+            corect: "fundamental"
         }, 
         {
             nume: "Timp",
             categorie: "enumerare",
-            bgcolor: "skyblue"
+            bgcolor: "aqua",
+            clasa: "draggable olinie",
+            corect: "fundamental"
         }, 
         {
             nume: "Intensitatea curentului electric",
             categorie: "enumerare",
-            bgcolor: "skyblue"
+            bgcolor: "aquamarine",
+            clasa: "draggable",
+            corect: "fundamental"
         }, 
         {
             nume: "Temperatura termodinamica",
             categorie: "derivate",
-            bgcolor: "skyblue"
+            bgcolor: "darksalmon",
+            clasa: "draggable",
+            corect: "fundamental"
         }, 
         {
             nume: "Cantitatea de substanta",
             categorie: "enumerare",
-            bgcolor: "skyblue"
+            bgcolor: "gainsboro",
+            clasa: "draggable",
+            corect: "fundamental"
         }, 
         {
             nume: "Forta",
             categorie: "derivate",
-            bgcolor: "skyblue"
+            bgcolor: "khaki",
+            clasa: "draggable olinie",
+            corect: "derivat"
         }, 
         {
             nume: "Presiune",
             categorie: "enumerare",
-            bgcolor: "skyblue"
+            bgcolor: "lightcoral",
+            clasa: "draggable olinie",
+            corect: "derivat"
         }, 
         {
             nume: "Lucru mecanic",
             categorie: "derivate",
-            bgcolor: "skyblue"
+            bgcolor: "lightskyblue",
+            clasa: "draggable olinie",
+            corect: "derivat"
         }, 
         {
             nume: "Putere",
             categorie: "enumerare",
-            bgcolor: "skyblue"
+            bgcolor: "skyblue",
+            clasa: "draggable olinie",
+            corect: "derivat"
         }
         ]
     }
@@ -62,7 +83,6 @@ class TestTragere extends Component {
     }
 
     onDragStart = (ev, id) =>{
-        console.log('dragstart: ', id);
         ev.dataTransfer.setData("id", id);
     }
 
@@ -70,7 +90,7 @@ class TestTragere extends Component {
         let id = ev.dataTransfer.getData("id");
 
         let marimi = this.state.marimi.filter((task) => {
-            if(task.nume == id) {
+            if(task.nume === id) {
                 task.categorie = cat;
             }
             return task;
@@ -81,11 +101,33 @@ class TestTragere extends Component {
             marimi
         });
     }
+
     render() {
+// Vectori pentru a muta casutele
         var marimi = {
             fundamentale: [],
             derivate: [],
             enumerare: []
+        }
+// Verificam daca marimile fundamentale au ca parinte .. raspunsul corect!
+        this.verificare = (e) => {
+            e.preventDefault();
+            if(document.getElementById("Lungime").parentElement.classList[0] === "fundamentale" &&
+            document.getElementById("Masa").parentElement.classList[0] === "fundamentale" &&
+            document.getElementById("Timp").parentElement.classList[0] === "fundamentale" &&
+            document.getElementById("Intensitatea curentului electric").parentElement.classList[0] === "fundamentale" &&
+            document.getElementById("Temperatura termodinamica").parentElement.classList[0] === "fundamentale" &&
+            document.getElementById("Cantitatea de substanta").parentElement.classList[0] === "fundamentale" &&
+            marimi.enumerare.length === 0
+            ) {
+                this.setState({
+                    mesaj: "Bravo, ai identificat corect marimile fizice!"
+                });
+            } else {                
+                this.setState({
+                    mesaj: "Reincearca!"
+                });
+            }
         }
 
         this.state.marimi.forEach((t) => {
@@ -93,7 +135,8 @@ class TestTragere extends Component {
                 <div key={t.nume}
                     onDragStart = {(e) => this.onDragStart(e, t.nume)}
                     draggable
-                    className="draggable"
+                    id={t.nume}
+                    className={t.clasa}
                     style={{backgroundColor: t.bgcolor}}
                     >
                         {t.nume}
@@ -108,38 +151,34 @@ class TestTragere extends Component {
                 onDragOver={(e) => this.onDragOver(e)}
                 onDrop = {(e) => this.onDrop(e, "fundamentale")}
             >
-                <span className="task-header">
+                <span className="task-header  color-orange">
                     Marimi fizice fundamentale
                 </span>
                 {marimi.fundamentale}
+            </div>            
+            <div className="enumerare"
+                onDragOver={(e) => this.onDragOver(e)}
+                onDrop = {(e) => this.onDrop(e, "enumerare")}
+            >
+                <span className="task-header color-blue">Marimi fizice</span>
+                {marimi.enumerare}
             </div>
             <div className="droppable" 
                 onDragOver={(e) => this.onDragOver(e)}
                 onDrop = {(e) => this.onDrop(e, "derivate")}
                 >
-                <span className="task-header">Marimi fizice derivate</span>
+                <span className="task-header  color-red">Marimi fizice derivate</span>
                 {marimi.derivate}
             </div>
-            <div className="enumerare"
-                onDragOver={(e) => this.onDragOver(e)}
-                onDrop = {(e) => this.onDrop(e, "enumerare")}
-            >
-                <span className="task-header">Marimi fizice</span>
-                {marimi.enumerare}
-            </div>
-            <div className="panou-butoane">
-                <button className="button">Resetare</button>
-                <button className="button">Verifica</button>
-            </div>
+            <div className="clear-float"></div>
+            <form className="panou-butoane">
+                <button type="submit" className="button">Resetare</button>
+                <button className="button" onClick={(e) => this.verificare(e)}>Verifica</button>
+            </form>
+            <p className={(this.state.mesaj.length < 12) ? "raspuns gresit" : "raspuns corect"}>{this.state.mesaj}</p>
         </div>
         )
     }
 }
 
-export default TestTragere
-
-// https://electronicaaplicata.wordpress.com/2015/02/21/cele-7-marimi-fundamentale/
-
-// 
-// https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.qreferat.com%2Ffiles%2Ftehnica-mecanica%2F174_poze%2Fimage008.gif&imgrefurl=http%3A%2F%2Fwww.qreferat.com%2Freferate%2Fmecanica%2FUNITATI-DE-MASURA-SISTEMUL-INT231.php&docid=PVNH4DOIq2PjWM&tbnid=QC4ao90VI_-lZM%3A&vet=10ahUKEwjupeDs-b3jAhVCzYUKHW7bB4UQMwhJKAcwBw..i&w=532&h=284&client=firefox-b-d&bih=899&biw=1282&q=marimile%20fizice%20fundamentale&ved=0ahUKEwjupeDs-b3jAhVCzYUKHW7bB4UQMwhJKAcwBw&iact=mrc&uact=8#h=284&imgdii=448qh0C-slo67M:&vet=10ahUKEwjupeDs-b3jAhVCzYUKHW7bB4UQMwhJKAcwBw..i&w=532
-// https://www.google.com/search?q=marimile+fizice+fundamentale&client=firefox-b-d&tbm=isch&tbs=rimg:CUAuGqPdFSP_1IjhldLGd1r9nTL96KksO3G2u448qh0C-slrJ-Wp7GNE5C1QP0N5h4Fw9q0j4_1QookQrZmQnxZSfFDyoSCWV0sZ3Wv2dMEW3JHUAM_1vIPKhIJv3oqSw7cba4RX9AoTRiQQIYqEgnjjyqHQL6yWhE9U0fgM4irYyoSCcn5ansY0TkLEQoH5q3VmvhvKhIJVA_1Q3mHgXD0RPVNH4DOIq2MqEgmrSPj9CiiRChEVbpffzj3UgCoSCdmZCfFlJ8UPESSW7vGr34Xv&tbo=u&sa=X&ved=2ahUKEwiah6Hw-b3jAhWBI1AKHWeXCfYQ9C96BAgBEBs&biw=1282&bih=899&dpr=1#imgrc=2ZkJ8WUnxQ9xQM:
+export default TestTragere;

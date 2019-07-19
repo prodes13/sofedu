@@ -13,6 +13,7 @@
     background: #262626;
     overflow: hidden;
     float: left;
+    border-radius: 10px;
 }
 
 .container_teorie input, .toggle {
@@ -48,6 +49,7 @@
 
 .container_teorie .imgBox, .container_teorie .details {
     padding: 20px;
+    padding-top: 0;
     position: absolute;
     top: 0;
     width: 100%;
@@ -82,9 +84,32 @@
     text-align: center;
     font-weight: bold;
 }
-
-.container_teorie .clear-float {
+.clear-float {
     position: relative;
     clear: both;
     padding-top: 20px;
+}
+
+.info-box {
+    width: 100%;
+    background-color: lightcyan;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.exclamare {
+    color: orangered;
+    padding: 0px 10px;
+    font-size: 24px;
+    margin-right: 40px;
+    background-color: white;
+    border-radius: 10px;
+}
+.link-extern {
+    text-decoration: none;
+}
+.link-extern:hover {
+    background-color: lightcoral;
+    color: white;
+    border-radius: 4px;
 }

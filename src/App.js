@@ -5,6 +5,7 @@ import Logare from './componente/Logare/Logare';
 import Test1 from './componente/Teste/Test1';
 import Test2 from './componente/Teste/Tragere/TestTragere';
 import Teorie from './componente/Teorie/Teorie';
+import Footer from './componente/Navigare/Footer';
 import { Route, Link, BrowserRouter } from 'react-router-dom';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route exact path="/test" component={Test1} />
       <Route exact path="/test2" component={Test2} />
       <Route exact path="/teorie" component={Teorie} />
+      <Route path="/" component={Footer} />
     </BrowserRouter>
     </>
   );

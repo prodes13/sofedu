@@ -1,65 +1,80 @@
 .container-drag {
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
   }
-  .fundamentale {
-    position: absolute;
-    width: 350px;
-    min-height: 50vh;
-    left: 0;
-    top: 10;
-    background-color: #EEEEEE;
+.container-drag  .fundamentale {
+    width: 29%;
+    height: 60vh;
+    float: left;
+    border: 2px dashed orange;
+    border-radius: 20px;
   }
   
-  .header {
+  .container-drag  .header {
     display: inline-block;
     margin: 0;
     padding: 0;
-    background-color: #E0E0E0;
     width:100%;
   }
   
-  .task-header {
+  .container-drag  .task-header {
     display: inline-block;
-    background-color: skyblue;
-    width:100%;
+    width:80%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .container-drag  .color-blue {
+    background-color: rgb(14, 145, 168);
+  }
+
+  .container-drag  .color-red {
+    background-color: rgb(223, 68, 48);
+  }
+  .container-drag  .color-orange {
+    background-color: orange;
+  }
+  .container-drag .droppable {
+    width: 30%;
+    min-height: 60vh;
+    float:left;
+    border: 2px dashed rgb(223, 68, 48);
+    border-radius: 20px;
   }
   
-  .droppable {
-    position: absolute;
-    width: 350px;
-    min-height: 50vh;
-    right: 0;
-    top: 10;
-    background-color: rgb(226, 226, 226);
-  }
-  
-  .draggable {
+  .container-drag .draggable {
     width: 150px;
     min-height: 50px;
-    background-color: yellow;
+    border-radius: 10px;
     margin: 5px auto;
   }
-  .enumerare {
-    height: 50vh;
+  .container-drag  .enumerare {
+    min-height: 60vh;
+    float:left;
+    width: 38%;
+    border: 2px dashed rgb(14, 145, 168);
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
-  .panou-butoane {
+  .container-drag  .panou-butoane {
     display: inline-block;
     margin: 0;
     padding: 0;
-    background-color: #E0E0E0;
     width:100%;
     padding: 20px;
-    position: absolute;
+    position: relative;
     bottom: 0px;
     left: 0;
 
   }
 
-  .panou-butoane button:first-child { 
+  .container-drag .panou-butoane button:first-child { 
     margin-right: 50px;
   }
 
-  .button {
+  .container-drag  .button {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
@@ -68,8 +83,26 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 4px;
     transition: all .3s;
   }
-  .button:hover {
+  .container-drag  .button:hover {
     background-color: #008CBA; /* Blue */
+  }
+
+  .olinie {
+    line-height: 50px;
+  }
+
+  .gresit {
+    color: red;
+  }
+
+  .corect {
+    color: green;
+  }
+
+  .raspuns {
+    font-size: 20px;
+    font-style: italic;
   }

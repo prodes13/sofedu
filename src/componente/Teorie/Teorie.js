@@ -138,8 +138,13 @@ class Teorie extends Component {
                 }
                 <div className="clear-float">
                 </div>
-                <div>
-                    Mai multe marimi veti gasi pe https://ro.wikipedia.org/wiki/Sistemul_interna%C8%9Bional_de_unit%C4%83%C8%9Bi
+                <div className="info-box">
+                    <span className="exclamare">!</span>Mai multe informatii veti gasi pe  
+                    <a className="link-extern"
+                        href="https://ro.wikipedia.org/wiki/Sistemul_interna%C8%9Bional_de_unit%C4%83%C8%9Bi"
+                        target="_blank"
+                    rel="noopener noreferrer"
+                    > pagina de wiki.</a>
                 </div>
             </div>
         )
