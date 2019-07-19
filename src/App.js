@@ -6,15 +6,17 @@ import Test1 from './componente/Teste/Test1';
 import Test2 from './componente/Teste/Tragere/TestTragere';
 import Teorie from './componente/Teorie/Teorie';
 import Footer from './componente/Navigare/Footer';
-import { Route, Link, BrowserRouter } from 'react-router-dom';
+import Acasa from './componente/Acasa/Acasa';
+import { Route, BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <>
     <BrowserRouter>
       <Route exact path="/login" component={Logare} />
-      <Route path="/" component={Navigatie} />
       <Route exact path="/test" component={Test1} />
+      <Route path="/" component={Navigatie} />
+      <Route exact path="/" component={Acasa} />
       <Route exact path="/test2" component={Test2} />
       <Route exact path="/teorie" component={Teorie} />
       <Route path="/" component={Footer} />

@@ -43,7 +43,7 @@
 
 .container_teorie input:checked ~ .toggle {
     
-    box-shadow: 0 0 0 500px #9c27b0;
+    box-shadow: 0 0 0 800px #9c27b0;
     transform: rotate(360deg);
 }
 
