@@ -71,7 +71,7 @@ class TestTragere extends Component {
         {
             nume: "Putere",
             categorie: "enumerare",
-            bgcolor: "skyblue",
+            bgcolor: "limegreen",
             clasa: "draggable olinie",
             corect: "derivat"
         }
