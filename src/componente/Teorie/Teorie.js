@@ -9,6 +9,8 @@ import mol from '../../imagini/mol.jpg';
 import timpul from '../../imagini/timpul.jpg';
 import presiune from '../../imagini/presiune.jpg';
 import forta from '../../imagini/forta.jpg';
+import putere from '../../imagini/putere.jpg';
+import lucrul from '../../imagini/lucrul.jpg';
 
 class Teorie extends Component {
     state = {
@@ -82,14 +84,14 @@ class Teorie extends Component {
                 nume: 'Lucru mecanic',
                 notare: 'L',
                 unitate: 'joule (J) = N * m',
-                imagine: presiune,
+                imagine: lucrul,
                 detalii: 'Lucrul mecanic este o mărime fizică definită ca produsul dintre componenta forței care acționează asupra unui corp în direcția deplasării punctului ei de aplicație și mărimea drumului parcurs. E o mărime ce caracterizează schimbarea stării dinamice a sistemului. Lucrul mecanic este o mărime fizică derivată, scalară, extensivă în raport cu drumul, având caracter de mărime de transformare legată de variația mărimii de stare energie.'
             },
             {
                 nume: 'Putere',
                 notare: 'P',
                 unitate: 'watt (W) = J/s',
-                imagine: presiune,
+                imagine: putere,
                 detalii: 'Puterea în fizică este mărimea fizică scalară ce caracterizează schimbul de energie în unitatea de timp. Un watt este puterea mecanică a unei forţe ce efectuează un lucru mecanic de un joule în timp de o secundă. În practică se mai foloseşte pentru puterea mecanică o unitate de măsură numită cal putere (CP).'
             }
         ]
