@@ -97,7 +97,7 @@ class Teorie extends Component {
         ]
     }
     afisareMarimi = (el) => (
-        <div className="card">
+        <div className="card" key={el.nume}>
         <input type="checkbox" name="" />
         <div className="toggle">?</div>
         <div className="imgBox">

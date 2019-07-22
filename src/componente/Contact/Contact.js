@@ -8,20 +8,20 @@ const Contact = () => {
                  <h1>Ai intrebari despre proiect, sau vrei sa ajuti? Contacteaza-ma!</h1>
                 <form>
 
-                    <label for="fname">First Name</label>
+                    <label htmlFor="fname">First Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
 
-                    <label for="lname">Last Name</label>
+                    <label htmlFor="lname">Last Name</label>
                     <input type="text" id="lname" name="lastname" placeholder="Your last name.."/>
 
-                    <label for="country">Country</label>
+                    <label htmlFor="country">Country</label>
                     <select id="country" name="country">
                     <option value="australia">Romania</option>
                     <option value="canada">Moldova</option>
                     <option value="usa">Alta tara</option>
                     </select>
 
-                    <label for="subject">Subject</label>
+                    <label htmlFor="subject">Subject</label>
                     <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
 
                     <input type="submit" value="Submit"/>
