@@ -8,6 +8,7 @@ import Teorie from './componente/Teorie/Teorie';
 import Footer from './componente/Navigare/Footer';
 import Acasa from './componente/Acasa/Acasa';
 import Contact from './componente/Contact/Contact';
+import Despre from './componente/Despre/Despre';
 import { Route, BrowserRouter } from 'react-router-dom';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route exact path="/test2" component={Test2} />
       <Route exact path="/teorie" component={Teorie} />
       <Route exact path="/contact" component={Contact} />
+      <Route exact path="/despre" component={Despre} />
       <Route path="/" component={Footer} />
     </BrowserRouter>
     </>

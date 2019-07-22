@@ -1,0 +1,14 @@
+.alineat p {
+    text-indent: 70px;
+}
+
+.despre-img {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-edu {
+    font-style: italic;
+    font-size: 11px;
+}
