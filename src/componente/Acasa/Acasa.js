@@ -6,7 +6,7 @@ const Acasa = () => {
     return (
         <div className="acasa container-acasa">
             <div className="fullscreen-video-wrap">
-                <video src={film} autoplay="true" loop="true"></video>
+                <video src={film} autoPlay={true} loop={true}></video>
             </div>
             <div className="overlay">
             </div>

@@ -3,7 +3,7 @@ import './Test1.css';
 
 class Test1 extends Component {
     state = {
-        metri1: '',
+        metri1: 'm',
 
     }
     handleChange = (e) => {
