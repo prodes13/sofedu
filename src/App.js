@@ -3,6 +3,7 @@ import './App.css';
 import Navigatie from './componente/Navigare/Navigatie';
 import Logare from './componente/Logare/Logare';
 import Test1 from './componente/Teste/Test1';
+import Variante from './componente/Teste/Variante/Variante';
 import Test2 from './componente/Teste/Tragere/TestTragere';
 import Teorie from './componente/Teorie/Teorie';
 import Footer from './componente/Navigare/Footer';
@@ -20,6 +21,7 @@ function App() {
       <Route path="/" component={Navigatie} />
       <Route exact path="/" component={Acasa} />
       <Route exact path="/test2" component={Test2} />
+      <Route exact path="/variante" component={Variante} />
       <Route exact path="/teorie" component={Teorie} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/despre" component={Despre} />
